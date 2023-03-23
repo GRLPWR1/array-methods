@@ -45,28 +45,29 @@ const filterByAge = (candidates) => {
 };
 console.log(filterByAge(candidates));
 
-const filterByScore = (candidates) => {
-    for (let candidate of candidates){
-        if (candidate.score >= 75) {
-            cosmonauts.push(candidate);
+const filterByScore = (arr) => {
+    for (let el of arr){
+        if (el.score >= 75) {
+            cosmonauts.push(arr);
         };
     };
     return cosmonauts;
 };
 console.log(filterByScore(candidates));
 
-const filterByServiceRecord = (candidates) => {
-    for (let candidate of candidates){
-        if (candidate.serviceRecord >= 5) {
-            cosmonauts.push(candidate);
+const filterByServiceRecord = (arr) => {
+    for (let el of arr){
+        if (el.serviceRecord >= 5) {
+            arr.push(el);
         };
     };
     return cosmonauts;
 };
 console.log(filterByServiceRecord(candidates));
 
-const sortByScore = (candidates) => {
-    return candidates.sort((a, b) => a.score - b.score);
+const sortByScore = (arr) => {
+    let newArr = arr.slice();
+    return newArr.sort((a, b) => b.score - a.score);
 };
 console.log(sortByScore(candidates));
 

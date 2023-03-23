@@ -12,7 +12,8 @@ const filterByServiceRecord = (el) => {
 };
 
 const sortByScore = (arr) => {
-    return arr.sort((a, b) => a.score - b.score);
+    let newArr = arr.slice();
+    return newArr.sort((a, b) => b.score - a.score);
 };
 
 const getMeanAge = (arr) => {
@@ -30,7 +31,7 @@ const getMeanAgeReduce = (arr) => {
 };
 
 const getNamesOnly = (arr) => {
-    return el => el.name;
+    return arr.name;
 };
 
 module.exports = {
